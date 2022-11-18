@@ -9,36 +9,19 @@ class JestTestBench {
 }
 
 const caseLoad = [
-  [1, true],
-  [(Math.sqrt(5) + 1) / 2, false],
-  [undefined, false],
-  [null, false],
-  [NaN, false],
-  [Number.NEGATIVE_INFINITY, false],
-  [Number.POSITIVE_INFINITY, false],
+  {parameter: 1, /*                        */ expectation: true},
+  {parameter: (Math.sqrt(5) + 1) / 2, /*   */ expectation: false},
+  {parameter: undefined, /*                */ expectation: false},
+  {parameter: null, /*                     */ expectation: false},
+  {parameter: NaN, /*                      */ expectation: false},
+  {parameter: Number.NEGATIVE_INFINITY, /* */ expectation: false},
+  {parameter: Number.POSITIVE_INFINITY, /* */ expectation: false},
 ];
- /**
-* @see {@link https://github.com/facebook/jest/issues/13625}
-* @see {@link file://./jest.tsconfig.json}
-* @summary Requires 'strict' mode to be disabled to run correctly
-*
-* @example
-* ```ts
-*{
-*  "extends": "./tsconfig.json",
-*  "compilerOptions": {
-*             // ⇓
-*    "strict": false // ⇦ 
-*             // ⇑
-*  }
-*}
-* ```
-* 
-*/
-describe(`${JestTestBench.name}(requires 'strict' mode to be disabled)...`, () => {
+
+describe(`${JestTestBench.name}...`, () => {
   test.each([...caseLoad])(
-    `.isNaturalNumber(%p) => %p"`,
-    (parameter, expectation) => {
+    `.isNaturalNumber() - %p"`,
+    ({parameter, expectation}) => {
       const result = JestTestBench.isNaturalNumber(parameter);
       expect(result).toEqual(expectation);
     },

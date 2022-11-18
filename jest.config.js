@@ -6,24 +6,6 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': ['ts-jest',
       {
-        /**
-        * @see {@link https://github.com/facebook/jest/issues/13625}
-        * @summary Alternate TypeScript options for Jest
-        *
-        * @example
-        * Compilation error if 'strict' mode is disabled:
-        * ```ts
-        *{
-        *  "extends": "./tsconfig.json",
-        *  "compilerOptions": {
-        *             // ⇓
-        *    "strict": true // ⇦ 
-        *             // ⇑
-        *  }
-        *}
-        * ```
-        * @see {@link file://./jest.tsconfig.json}
-        */
         tsconfig: './jest.tsconfig.json',
       },
     ],

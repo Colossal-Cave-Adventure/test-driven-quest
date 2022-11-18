@@ -1,0 +1,36 @@
+{
+  "name": "test-driven-quest",
+  "version": "1.0.0",
+  "description": "Spoof of concept for Recreational Programming",
+  "url": "https://Colossal-Cave-Adventure.github.io",
+  "main": "./JavaScript/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc -b && node ./JavaScript/index.js",
+    "test": "jest",
+    "preinstall":  "echo ToDo: 'preinstall'",
+    "install":  "echo ToDo: 'install'",
+    "postinstall":  "echo ToDo: 'postinstall'",
+    "prepublish":  "echo ToDo: 'prepublish'",
+    "preprepare":  "echo ToDo: 'preprepare'",
+    "prepare":  "echo ToDo: 'prepare'",
+    "postprepare":  "echo ToDo: 'postprepare'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Colossal-Cave-Adventure/test-driven-quest.git"
+  },
+  "keywords": ["TypeScript","Jest","Recreational","Programming","JavaScript","NodeJS"],
+  "author": "I-Omnibus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Colossal-Cave-Adventure/test-driven-quest/issues"
+  },
+  "homepage": "https://github.com/Colossal-Cave-Adventure/test-driven-quest#readme",
+  "devDependencies": {
+    "@types/jest": "^29.2.2",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "exclude": [
+    "./node_modules/**/*",
+    "./fuck-ups/**/*"
+  ],
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ES6",
+    "sourceRoot": "./src",
+    "outDir": "./JavaScript",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "downlevelIteration": true,
+     }
+}
